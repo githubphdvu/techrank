@@ -1,0 +1,9 @@
+CREATE TABLE "TechRank" (
+  "id" TEXT NOT NULL,
+  "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "updatedAt" TIMESTAMP(3) NOT NULL,
+  "tech" VARCHAR(30) NOT NULL,
+  "rank" INTEGER NOT NULL CHECK ("rank" BETWEEN 1 AND 10),
+
+  CONSTRAINT "TechRank_pkey" PRIMARY KEY ("id")
+);
